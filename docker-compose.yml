@@ -1,0 +1,30 @@
+services:
+  # The static site: Hugo compiles it inside the image (pinned version, see
+  # Dockerfile) and nginx serves the result. Fully reproducible — no host tools.
+  #   docker compose up --build site   ->  http://localhost:8000
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: confview:latest
+    container_name: confview
+    ports:
+      - "8000:80"
+    restart: unless-stopped
+
+  # On-demand data refresh (not started by `up`; it's in the "tools" profile).
+  # Scrapes the official CFP pages and rewrites ./data/conferences.json on the
+  # host. Run it, then rebuild `site` to publish the new dates:
+  #   docker compose run --rm refresh
+  #   docker compose up --build site
+  refresh:
+    build:
+      context: .
+      dockerfile: Dockerfile.refresh
+    image: confview-refresh:latest
+    profiles: ["tools"]
+    # Write ./data as your own user (export HOST_UID=$(id -u) HOST_GID=$(id -g)
+    # if yours are not 1000).
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    volumes:
+      - ./data:/app/data

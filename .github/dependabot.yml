@@ -1,0 +1,16 @@
+# Keeps the SHA-pinned actions, the pinned Python packages and the digest-pinned
+# Docker base images current.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly

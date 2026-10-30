@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+*.tmp
+
+# Hugo build artifacts
+public/
+resources/
+.hugo_build.lock
+
+# Transient scraper write; the committed data/*.json is the seed + build input.
+data/*.json.tmp
+
+.venv/
+venv/
+.DS_Store
+
+# Local Claude Code session settings
+.claude/settings.local.json

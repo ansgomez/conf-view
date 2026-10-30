@@ -1,0 +1,22 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "ConfView — Conference Deadline Tracker"
+
+# Single-page site: no taxonomies, feed or sitemap to generate.
+disableKinds = ["taxonomy", "term", "rss", "sitemap"]
+
+# Everything the site "means" that isn't a conference record lives here so it is
+# editable in one place. Tier *definitions* (labels, colours, ordering, blurbs)
+# live in data/tiers.yaml; this section holds the smaller knobs.
+[params]
+  # Subtitle shown under the title. Purely cosmetic.
+  subtitle = "Academic conference submission-deadline tracker"
+
+  # Your "home" region. Any conference in a tier flagged `flag_outside_region`
+  # that is NOT in this region (and not "TBD") gets highlighted as a nudge —
+  # e.g. a B-tier venue that would mean long-haul travel. Set to "" to disable.
+  preferredRegion = "Europe"
+
+# The homepage template is fully self-contained; no Markdown rendering needed.
+[minify]
+  disableJSON = true   # never touch the embedded application/json data blocks

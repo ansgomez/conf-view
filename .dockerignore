@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.tmp
+data/*.json.tmp
+.venv/
+venv/
+.git/
+.gitignore
+.DS_Store
+# Hugo build outputs — regenerated inside the image, never copy the host's.
+public/
+resources/
+.hugo_build.lock

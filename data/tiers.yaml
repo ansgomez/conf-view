@@ -1,0 +1,43 @@
+# -----------------------------------------------------------------------------
+# Tier definitions — YOUR personal classification of conference tiers.
+#
+# This is the file to edit when you want to reclassify what "A" and "B" mean,
+# rename them, recolour them, reorder them, or add a new tier. Each conference in
+# data/conferences.json references a tier by its `id` (e.g. "A", "B"). Anything a
+# conference points at that isn't listed here just renders with neutral styling.
+#
+# Order in this list = order tiers appear in the legend and the filter dropdown.
+#
+# Fields per tier:
+#   id                  (required) must match the `tier` value in conferences.json
+#   label               text shown in the filter dropdown
+#   short               tiny badge text on each card (defaults to id)
+#   color               text/accent colour (any CSS colour)
+#   bg                  badge background colour
+#   blurb               one line explaining, in the legend, what this tier means
+#   flag_outside_region if true, editions outside params.preferredRegion are
+#                       highlighted (see hugo.toml). Optional, defaults to false.
+# -----------------------------------------------------------------------------
+
+- id: A
+  label: "Tier A — always submit"
+  short: "A"
+  color: "#6a3fd0"
+  bg: "#ede7fb"
+  blurb: "Top venues I target regardless of location."
+
+- id: "B+"
+  label: "Tier B+ — strong, usually worth it"
+  short: "B+"
+  color: "#2f6fd0"
+  bg: "#e7eefc"
+  blurb: "A cut above B; I'll usually submit even with some travel."
+  # Add `flag_outside_region: true` here if you want the travel nudge on B+ too.
+
+- id: B
+  label: "Tier B — worth it near home"
+  short: "B"
+  color: "#1c6f67"
+  bg: "#e9f4f2"
+  blurb: "Solid venues; I prefer these when they're in my region."
+  flag_outside_region: true

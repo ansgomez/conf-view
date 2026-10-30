@@ -1,0 +1,4 @@
+# Python is only needed for the offline refresh tool (refresh.py + scrapers.py);
+# the site itself is built by Hugo.
+requests==2.34.2
+beautifulsoup4==4.15.0

@@ -1,0 +1,685 @@
+{
+  "last_updated": "2026-10-30",
+  "conferences": [
+    {
+      "id": "wons",
+      "name": "WONS",
+      "full_name": "Wireless On-demand Network systems and Services Conference",
+      "edition_year": 2027,
+      "location": "Cortina d'Ampezzo, Italy",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["low power wireless networking", "internet of things", "embedded systems"],
+      "url_template": "https://{year}.wons-conference.org/",
+      "sources": ["https://2027.wons-conference.org/", "https://wons-conference.org/"],
+      "stages": {
+        "submission":   { "date": "2026-10-23", "status": "confirmed" },
+        "notification": { "date": "2026-11-20", "status": "confirmed" },
+        "camera_ready": { "date": "2026-12-11", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-01-25", "end": "2027-01-27", "status": "confirmed" }
+    },
+    {
+      "id": "date",
+      "name": "DATE",
+      "full_name": "Design, Automation and Test in Europe",
+      "edition_year": 2027,
+      "location": "Dresden, Germany",
+      "region": "Europe",
+      "tier": "B+",
+      "topics": ["embedded systems", "tiny ML", "cyber-physical systems", "smart energy"],
+      "url_template": "https://www.date-conference.com/",
+      "sources": ["https://www.date-conference.com/call-for-papers", "https://www.date-conference.com/date-2027-call-papers", "https://www.date-conference.com/"],
+      "stages": {
+        "submission":   { "date": "2026-09-20", "status": "confirmed" },
+        "notification": { "date": "2026-11-23", "status": "confirmed" },
+        "camera_ready": { "date": "2026-12-16", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-03-22", "end": "2027-03-24", "status": "confirmed" }
+    },
+    {
+      "id": "sensys",
+      "name": "SenSys",
+      "full_name": "ACM/IEEE Conference on Embedded Artificial Intelligence and Sensing Systems",
+      "edition_year": 2027,
+      "location": "Boulder, CO, USA",
+      "region": "Non-Europe",
+      "tier": "A",
+      "topics": ["embedded systems", "tiny ML", "internet of things", "low power wireless networking", "cyber-physical systems"],
+      "url_template": "https://sensys.acm.org/{year}/cfp.html",
+      "sources": ["https://sensys.acm.org/2027/cfp.html", "https://sensys.acm.org/2027/"],
+      "stages": {
+        "submission":   { "date": "2026-11-05", "status": "confirmed" },
+        "notification": { "date": "2027-01-28", "status": "confirmed" },
+        "camera_ready": { "date": "2027-03-31", "status": "estimated" }
+      },
+      "conference": { "start": "2027-05-17", "end": "2027-05-20", "status": "confirmed" }
+    },
+    {
+      "id": "mobicom",
+      "name": "MobiCom",
+      "full_name": "ACM International Conference on Mobile Computing and Networking",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "A",
+      "topics": ["mobile computing", "low power wireless networking", "internet of things"],
+      "url_template": "https://www.sigmobile.org/mobicom/",
+      "sources": ["https://www.sigmobile.org/mobicom/2027/cfp.html", "https://www.sigmobile.org/mobicom/2027/", "https://www.sigmobile.org/mobicom/"],
+      "stages": {
+        "submission":   { "date": "2027-03-12", "status": "estimated" },
+        "notification": { "date": "2027-06-28", "status": "estimated" },
+        "camera_ready": { "date": "2027-08-31", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-18", "end": "2027-10-22", "status": "confirmed" }
+    },
+    {
+      "id": "mobisys",
+      "name": "MobiSys",
+      "full_name": "ACM International Conference on Mobile Systems, Applications, and Services",
+      "edition_year": 2027,
+      "location": "Ho Chi Minh City, Vietnam",
+      "region": "Non-Europe",
+      "tier": "A",
+      "topics": ["mobile computing", "embedded systems", "internet of things", "cyber-physical systems"],
+      "url_template": "https://www.sigmobile.org/mobisys/",
+      "sources": ["https://www.sigmobile.org/mobisys/2027/", "https://www.sigmobile.org/mobisys/"],
+      "stages": {
+        "submission":   { "date": "2026-12-04", "status": "confirmed" },
+        "notification": { "date": "2027-03-06", "status": "confirmed" },
+        "camera_ready": { "date": "2027-04-14", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-06-21", "end": "2027-06-25", "status": "confirmed" }
+    },
+    {
+      "id": "rtss",
+      "name": "RTSS",
+      "full_name": "IEEE Real-Time Systems Symposium",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "A",
+      "topics": ["embedded systems", "cyber-physical systems", "internet of things"],
+      "url_template": "https://{year}.rtss.org/",
+      "sources": ["https://2026.rtss.org/"],
+      "stages": {
+        "submission":   { "date": "2027-05-26", "status": "estimated" },
+        "notification": { "date": "2027-07-25", "status": "estimated" },
+        "camera_ready": { "date": "2027-09-15", "status": "estimated" }
+      },
+      "conference": { "start": "2027-12-08", "end": "2027-12-10", "status": "estimated" }
+    },
+    {
+      "id": "emsoft",
+      "name": "EMSOFT",
+      "full_name": "ACM/IEEE International Conference on Embedded Software",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "A",
+      "topics": ["embedded systems", "cyber-physical systems", "internet of things"],
+      "url_template": "https://esweek.org/emsoft/",
+      "sources": ["https://esweek.org/emsoft/"],
+      "stages": {
+        "submission":   { "date": "2027-03-30", "status": "estimated" },
+        "notification": { "date": "2027-05-22", "status": "estimated" },
+        "camera_ready": { "date": "2027-08-17", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-03", "end": "2027-10-08", "status": "estimated" }
+    },
+    {
+      "id": "cases",
+      "name": "CASES",
+      "full_name": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (ESWEEK)",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "B",
+      "topics": ["embedded systems", "computer architecture"],
+      "url_template": "https://esweek.org/cases/",
+      "sources": ["https://esweek.org/cases/", "https://esweek.org/"],
+      "stages": {
+        "submission":   { "date": "2027-03-30", "status": "estimated" },
+        "notification": { "date": "2027-05-22", "status": "estimated" },
+        "camera_ready": { "date": "2027-08-17", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-03", "end": "2027-10-08", "status": "estimated" }
+    },
+    {
+      "id": "codes-isss",
+      "name": "CODES+ISSS",
+      "full_name": "International Conference on Hardware/Software Codesign and System Synthesis (ESWEEK)",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "B",
+      "topics": ["embedded systems", "computer architecture"],
+      "url_template": "https://esweek.org/codes-isss/",
+      "sources": ["https://esweek.org/codes-isss/", "https://esweek.org/"],
+      "stages": {
+        "submission":   { "date": "2027-03-30", "status": "estimated" },
+        "notification": { "date": "2027-05-22", "status": "estimated" },
+        "camera_ready": { "date": "2027-08-17", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-03", "end": "2027-10-08", "status": "estimated" }
+    },
+    {
+      "id": "aamas",
+      "name": "AAMAS",
+      "full_name": "International Conference on Autonomous Agents and Multiagent Systems",
+      "edition_year": 2027,
+      "location": "Hanoi, Vietnam",
+      "region": "Non-Europe",
+      "tier": "A",
+      "topics": ["multi-agent systems", "embodied agents"],
+      "url_template": "https://ifaamas.org/Conferences/conferences.html",
+      "sources": ["https://warwick.ac.uk/fac/sci/dcs/aamas2027/calls/call-for-main-track/", "https://warwick.ac.uk/fac/sci/dcs/aamas2027/", "https://ifaamas.org/Conferences/conferences.html"],
+      "stages": {
+        "submission":   { "date": "2026-10-08", "status": "confirmed" },
+        "notification": { "date": "2026-12-21", "status": "confirmed" },
+        "camera_ready": { "date": "2027-01-25", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-05-03", "end": "2027-05-07", "status": "confirmed" }
+    },
+    {
+      "id": "cf",
+      "name": "CF",
+      "full_name": "ACM International Conference on Computing Frontiers",
+      "edition_year": 2027,
+      "location": "Trento, Italy",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["computer architecture", "embedded systems", "parallel computing", "novel computing paradigms"],
+      "url_template": "https://www.computingfrontiers.org/{year}/",
+      "sources": ["https://www.computingfrontiers.org/2027/", "https://www.computingfrontiers.org/"],
+      "stages": {
+        "submission":   { "date": "2027-01-25", "status": "confirmed" },
+        "notification": { "date": "2027-03-15", "status": "confirmed" },
+        "camera_ready": { "date": "2027-04-09", "status": "estimated" }
+      },
+      "conference": { "start": "2027-05-25", "end": "2027-05-27", "status": "confirmed" }
+    },
+    {
+      "id": "dcoss",
+      "name": "DCOSS-IoT",
+      "full_name": "Distributed Computing in Smart Systems and the Internet of Things",
+      "edition_year": 2027,
+      "location": "Montreal, Canada",
+      "region": "Non-Europe",
+      "tier": "B",
+      "topics": ["internet of things", "energy harvesting", "low power wireless networking", "cyber-physical systems"],
+      "url_template": "https://dcoss.org/call-for-papers/",
+      "sources": ["https://dcoss.org/call-for-papers/", "https://dcoss.org/"],
+      "stages": {
+        "submission":   { "date": "2027-01-27", "status": "confirmed" },
+        "notification": { "date": "2027-03-28", "status": "confirmed" },
+        "camera_ready": { "date": "2027-04-15", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-06-21", "end": "2027-06-23", "status": "confirmed" }
+    },
+    {
+      "id": "ewsn",
+      "name": "EWSN",
+      "full_name": "International Conference on Embedded Wireless Systems and Networks",
+      "edition_year": 2027,
+      "location": "Thessaloniki, Greece",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "low power wireless networking", "internet of things"],
+      "url_template": "https://ewsn.org/",
+      "sources": ["https://ewsn27.diag.uniroma1.it/", "https://ewsn.org/"],
+      "stages": {
+        "submission":   { "date": "2026-12-10", "status": "confirmed" },
+        "notification": { "date": "2027-06-15", "status": "estimated" },
+        "camera_ready": { "date": "2027-07-06", "status": "estimated" }
+      },
+      "conference": { "start": "2027-09-27", "end": "2027-09-30", "status": "confirmed" }
+    },
+    {
+      "id": "eumas",
+      "name": "EUMAS",
+      "full_name": "European Conference on Multi-Agent Systems",
+      "edition_year": 2027,
+      "location": "TBD, Europe",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["multi-agent systems", "embodied agents"],
+      "url_template": "https://euramas.github.io/eumas{year}/",
+      "sources": ["https://euramas.github.io/eumas2026/"],
+      "stages": {
+        "submission":   { "date": "2027-05-18", "status": "estimated" },
+        "notification": { "date": "2027-06-30", "status": "estimated" },
+        "camera_ready": { "date": "2027-07-19", "status": "estimated" }
+      },
+      "conference": { "start": "2027-09-20", "end": "2027-09-24", "status": "estimated" }
+    },
+    {
+      "id": "paams",
+      "name": "PAAMS",
+      "full_name": "International Conference on Practical Applications of Agents and Multi-Agent Systems",
+      "edition_year": 2027,
+      "location": "TBD, Europe",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["multi-agent systems", "embodied agents", "smart energy"],
+      "url_template": "https://paams.net/",
+      "sources": ["https://paams.net/"],
+      "stages": {
+        "submission":   { "date": "2027-05-22", "status": "estimated" },
+        "notification": { "date": "2027-06-26", "status": "estimated" },
+        "camera_ready": { "date": "2027-07-15", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-20", "end": "2027-10-22", "status": "estimated" }
+    },
+    {
+      "id": "coins",
+      "name": "COINS",
+      "full_name": "IEEE International Conference on Omni-layer Intelligent Systems",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "B",
+      "topics": ["internet of things", "tiny ML", "embodied agents", "multi-agent systems", "embedded systems"],
+      "url_template": "https://coinsconf.com/",
+      "sources": ["https://coinsconf.com/cfp/", "https://coinsconf.com/"],
+      "stages": {
+        "submission":   { "date": "2027-04-29", "status": "estimated" },
+        "notification": { "date": "2027-06-15", "status": "estimated" },
+        "camera_ready": { "date": "2027-06-29", "status": "estimated" }
+      },
+      "conference": { "start": "2027-09-06", "end": "2027-09-08", "status": "estimated" }
+    },
+    {
+      "id": "sas",
+      "name": "SAS",
+      "full_name": "IEEE Sensors Applications Symposium",
+      "edition_year": 2027,
+      "location": "Ho Chi Minh City, Vietnam",
+      "region": "Non-Europe",
+      "tier": "B",
+      "topics": ["sensors", "energy harvesting", "tiny ML", "internet of things"],
+      "url_template": "https://sensorapps.org/{year}",
+      "sources": ["https://sensorapps.org/2027/call-for-papers", "https://sensorapps.org/2027"],
+      "stages": {
+        "submission":   { "date": "2026-11-15", "status": "confirmed" },
+        "notification": { "date": "2026-12-15", "status": "confirmed" },
+        "camera_ready": { "date": "2027-02-01", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-04-26", "end": "2027-04-28", "status": "confirmed" }
+    },
+    {
+      "id": "applepies",
+      "name": "ApplePies",
+      "full_name": "Applications in Electronics Pervading Industry, Environment and Society",
+      "edition_year": 2027,
+      "location": "TBD (recent editions: Italy)",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "sensors", "internet of things", "tiny ML"],
+      "url_template": "https://applepies.unige.it/",
+      "sources": ["https://applepies.unige.it/"],
+      "stages": {
+        "submission":   { "date": "2027-07-16", "status": "estimated" },
+        "notification": { "date": "2027-08-31", "status": "estimated" },
+        "camera_ready": { "date": "2027-09-15", "status": "estimated" }
+      },
+      "conference": { "start": "2027-09-23", "end": "2027-09-24", "status": "estimated" }
+    },
+    {
+      "id": "ecrts",
+      "name": "ECRTS",
+      "full_name": "Euromicro Conference on Real-Time Systems",
+      "edition_year": 2027,
+      "location": "Prague, Czech Republic",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "cyber-physical systems"],
+      "url_template": "https://www.ecrts.org/",
+      "sources": ["https://www.ecrts.org/call-for-papers/", "https://www.ecrts.org/"],
+      "stages": {
+        "submission":   { "date": "2027-02-26", "status": "confirmed" },
+        "notification": { "date": "2027-04-20", "status": "estimated" },
+        "camera_ready": { "date": "2027-05-25", "status": "estimated" }
+      },
+      "conference": { "start": "2027-07-13", "end": "2027-07-16", "status": "confirmed" }
+    },
+    {
+      "id": "dsd",
+      "name": "DSD",
+      "full_name": "Euromicro Conference on Digital System Design",
+      "edition_year": 2027,
+      "location": "TBD, Europe",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "computer architecture"],
+      "url_template": "https://dsd-seaa.com/",
+      "sources": ["https://dsd-seaa.com/"],
+      "stages": {
+        "submission":   { "date": "2027-03-31", "status": "estimated" },
+        "notification": { "date": "2027-05-30", "status": "estimated" },
+        "camera_ready": { "date": "2027-06-30", "status": "estimated" }
+      },
+      "conference": { "start": "2027-08-25", "end": "2027-08-27", "status": "estimated" }
+    },
+    {
+      "id": "samos",
+      "name": "SAMOS",
+      "full_name": "International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation",
+      "edition_year": 2027,
+      "location": "Samos, Greece",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "computer architecture", "parallel computing"],
+      "url_template": "https://samos-conference.com/",
+      "sources": ["https://samos-conference.com/"],
+      "stages": {
+        "submission":   { "date": "2027-02-15", "status": "estimated" },
+        "notification": { "date": "2027-05-15", "status": "estimated" },
+        "camera_ready": { "date": "2027-06-15", "status": "estimated" }
+      },
+      "conference": { "start": "2027-07-03", "end": "2027-07-08", "status": "confirmed" }
+    },
+    {
+      "id": "sies",
+      "name": "SIES",
+      "full_name": "IEEE International Symposium on Industrial Embedded Systems",
+      "edition_year": 2027,
+      "location": "TBD, Europe",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "cyber-physical systems", "internet of things"],
+      "url_template": "https://ieee-sies.org/",
+      "sources": ["https://ieee-sies.org/"],
+      "stages": {
+        "submission":   { "date": "2027-02-15", "status": "estimated" },
+        "notification": { "date": "2027-03-31", "status": "estimated" },
+        "camera_ready": { "date": "2027-04-30", "status": "estimated" }
+      },
+      "conference": { "start": "2027-06-09", "end": "2027-06-11", "status": "estimated" }
+    },
+    {
+      "id": "patmos",
+      "name": "PATMOS",
+      "full_name": "International Symposium on Power and Timing Modeling, Optimization and Simulation",
+      "edition_year": 2027,
+      "location": "TBD, Europe",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "computer architecture"],
+      "url_template": "https://dblp.org/db/conf/patmos/index.html",
+      "sources": ["https://dblp.org/db/conf/patmos/index.html"],
+      "stages": {
+        "submission":   { "date": "2027-05-15", "status": "estimated" },
+        "notification": { "date": "2027-07-01", "status": "estimated" },
+        "camera_ready": { "date": "2027-07-31", "status": "estimated" }
+      },
+      "conference": { "start": "2027-09-20", "end": "2027-09-22", "status": "estimated" }
+    },
+    {
+      "id": "fdl",
+      "name": "FDL",
+      "full_name": "Forum on Specification and Design Languages",
+      "edition_year": 2027,
+      "location": "TBD, Europe",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["embedded systems", "cyber-physical systems"],
+      "url_template": "https://fdl-conference.com/",
+      "sources": ["https://fdl-conference.com/"],
+      "stages": {
+        "submission":   { "date": "2027-05-30", "status": "estimated" },
+        "notification": { "date": "2027-07-15", "status": "estimated" },
+        "camera_ready": { "date": "2027-08-15", "status": "estimated" }
+      },
+      "conference": { "start": "2027-09-15", "end": "2027-09-17", "status": "estimated" }
+    },
+    {
+      "id": "icecs",
+      "name": "ICECS",
+      "full_name": "IEEE International Conference on Electronics, Circuits and Systems",
+      "edition_year": 2027,
+      "location": "Dubai, United Arab Emirates",
+      "region": "Non-Europe",
+      "tier": "B",
+      "topics": ["sensors", "embedded systems", "computer architecture"],
+      "url_template": "https://icecs{year}.org/",
+      "sources": ["https://ieee-cas.org/event/conference/2027-ieee-34th-international-conference-electronics-circuits-and-systems", "https://ieee-cas.org/"],
+      "stages": {
+        "submission":   { "date": "2027-06-15", "status": "estimated" },
+        "notification": { "date": "2027-08-15", "status": "estimated" },
+        "camera_ready": { "date": "2027-09-30", "status": "estimated" }
+      },
+      "conference": { "start": "2027-11-24", "end": "2027-11-26", "status": "confirmed" }
+    },
+    {
+      "id": "ecai",
+      "name": "ECAI",
+      "full_name": "European Conference on Artificial Intelligence",
+      "edition_year": 2027,
+      "location": "Athens, Greece",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["multi-agent systems", "embodied agents"],
+      "url_template": "https://ecai{year}.org/",
+      "sources": ["https://ecai2027.org/", "https://www.eurai.org/"],
+      "stages": {
+        "submission":   { "date": "2027-04-14", "status": "confirmed" },
+        "notification": { "date": "2027-07-15", "status": "confirmed" },
+        "camera_ready": { "date": "2027-08-31", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-02", "end": "2027-10-07", "status": "confirmed" }
+    },
+    {
+      "id": "dsn",
+      "name": "DSN",
+      "full_name": "IEEE/IFIP International Conference on Dependable Systems and Networks",
+      "edition_year": 2027,
+      "location": "Berlin, Germany",
+      "region": "Europe",
+      "tier": "B+",
+      "topics": ["embedded systems", "cyber-physical systems", "internet of things"],
+      "url_template": "https://dsn2027-berlin.github.io/",
+      "sources": ["https://dsn2027-berlin.github.io/important-dates/"],
+      "stages": {
+        "submission":   { "date": "2026-12-02", "status": "confirmed" },
+        "notification": { "date": "2027-03-18", "status": "confirmed" },
+        "camera_ready": { "date": "2027-04-24", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-06-22", "end": "2027-06-25", "status": "confirmed" }
+    },
+    {
+      "id": "rtas",
+      "name": "RTAS",
+      "full_name": "IEEE Real-Time and Embedded Technology and Applications Symposium",
+      "edition_year": 2027,
+      "location": "Boulder, CO, USA",
+      "region": "Non-Europe",
+      "tier": "A",
+      "topics": ["embedded systems", "cyber-physical systems"],
+      "url_template": "https://{year}.rtas.org/",
+      "sources": ["https://2027.rtas.org/", "https://cps-iot-week-2027.sigbed.org/"],
+      "stages": {
+        "submission":   { "date": "2026-11-05", "status": "confirmed" },
+        "notification": { "date": "2027-01-28", "status": "estimated" },
+        "camera_ready": { "date": "2027-03-30", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-05-17", "end": "2027-05-20", "status": "confirmed" }
+    },
+    {
+      "id": "hscc-iccps",
+      "name": "HSCC+ICCPS",
+      "full_name": "ACM/IEEE International Conference on Cyber-Physical and Autonomous Systems",
+      "edition_year": 2027,
+      "location": "Boulder, CO, USA",
+      "region": "Non-Europe",
+      "tier": "B+",
+      "topics": ["cyber-physical systems", "embedded systems"],
+      "url_template": "https://cps-iot-week-{year}.sigbed.org/",
+      "sources": ["https://cps-iot-week-2027.sigbed.org/"],
+      "stages": {
+        "submission":   { "date": "2026-11-05", "status": "confirmed" },
+        "notification": { "date": "2027-01-28", "status": "confirmed" },
+        "camera_ready": { "date": "2027-03-30", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-05-17", "end": "2027-05-20", "status": "confirmed" }
+    },
+    {
+      "id": "arcs",
+      "name": "ARCS",
+      "full_name": "GI/ITG International Conference on Architecture of Computing Systems",
+      "edition_year": 2027,
+      "location": "Magdeburg, Germany",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["computer architecture", "embedded systems"],
+      "url_template": "https://arcs-conference.org/",
+      "sources": ["https://arcs-conference.org/", "https://arcs-conference.org/fileadmin/TG/ARCS_Conference/ARCS2027/ARCS27_one_pager.pdf"],
+      "stages": {
+        "submission":   { "date": "2026-12-21", "status": "confirmed" },
+        "notification": { "date": "2027-02-08", "status": "confirmed" },
+        "camera_ready": { "date": "2027-02-24", "status": "confirmed" }
+      },
+      "conference": { "start": "2027-03-09", "end": "2027-03-11", "status": "confirmed" }
+    },
+    {
+      "id": "hipeac",
+      "name": "HiPEAC",
+      "full_name": "HiPEAC Conference (journal-first; no paper deadline)",
+      "edition_year": 2027,
+      "location": "Glasgow, UK",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["computer architecture", "embedded systems", "parallel computing"],
+      "url_template": "https://www.hipeac.net/{year}/",
+      "sources": ["https://www.hipeac.net/2027/glasgow/"],
+      "stages": {},
+      "conference": { "start": "2027-01-18", "end": "2027-01-20", "status": "confirmed" }
+    },
+    {
+      "id": "secon",
+      "name": "SECON",
+      "full_name": "IEEE International Conference on Sensing, Communication and Networking",
+      "edition_year": 2027,
+      "location": "Lisbon, Portugal",
+      "region": "Europe",
+      "tier": "B",
+      "topics": ["low power wireless networking", "internet of things", "sensors"],
+      "url_template": "https://www.comsoc.org/conferences-events/ieee-international-conference-sensing-communication-and-networking-{year}",
+      "sources": ["https://www.comsoc.org/conferences-events/ieee-international-conference-sensing-communication-and-networking-2027", "https://www.myhuiban.com/conference/311"],
+      "stages": {
+        "submission":   { "date": "2026-11-30", "status": "estimated" },
+        "notification": { "date": "2027-02-15", "status": "estimated" },
+        "camera_ready": { "date": "2027-03-15", "status": "estimated" }
+      },
+      "conference": { "start": "2027-05-05", "end": "2027-05-07", "status": "estimated" }
+    },
+    {
+      "id": "wowmom",
+      "name": "WoWMoM",
+      "full_name": "IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks",
+      "edition_year": 2027,
+      "location": "Irvine, CA, USA (unconfirmed)",
+      "region": "Non-Europe",
+      "tier": "B",
+      "topics": ["low power wireless networking", "mobile computing", "internet of things"],
+      "url_template": "https://www.cs.unibo.it/wowmom2026/",
+      "sources": ["https://www.myhuiban.com/conference/652"],
+      "stages": {
+        "submission":   { "date": "2026-12-01", "status": "estimated" },
+        "notification": { "date": "2027-02-10", "status": "estimated" },
+        "camera_ready": { "date": "2027-03-10", "status": "estimated" }
+      },
+      "conference": { "start": "2027-06-08", "end": "2027-06-11", "status": "estimated" }
+    },
+    {
+      "id": "ubicomp",
+      "name": "UbiComp/IMWUT",
+      "full_name": "ACM International Joint Conference on Pervasive and Ubiquitous Computing (papers via IMWUT, four cycles a year)",
+      "edition_year": 2027,
+      "location": "Seoul, South Korea",
+      "region": "Non-Europe",
+      "tier": "B+",
+      "topics": ["mobile computing", "sensors", "internet of things"],
+      "url_template": "https://imwut.acm.org/",
+      "sources": ["https://sigchi.org/events/ubicomp-2027/", "https://imwut.acm.org/"],
+      "stages": {
+        "submission":   { "date": "2026-11-15", "status": "estimated" },
+        "notification": { "date": "2027-02-01", "status": "estimated" },
+        "camera_ready": { "date": "2027-03-01", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-03", "end": "2027-10-07", "status": "estimated" }
+    },
+    {
+      "id": "icdcs",
+      "name": "ICDCS",
+      "full_name": "IEEE International Conference on Distributed Computing Systems",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "B+",
+      "topics": ["internet of things", "parallel computing"],
+      "url_template": "https://icdcs{year}.icdcs.org/",
+      "sources": ["https://icdcs2025.icdcs.org/"],
+      "stages": {
+        "submission":   { "date": "2027-01-20", "status": "estimated" },
+        "notification": { "date": "2027-03-31", "status": "estimated" },
+        "camera_ready": { "date": "2027-04-30", "status": "estimated" }
+      },
+      "conference": { "start": "2027-07-19", "end": "2027-07-22", "status": "estimated" }
+    },
+    {
+      "id": "mswim",
+      "name": "MSWiM",
+      "full_name": "ACM/IEEE International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems",
+      "edition_year": 2027,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "B",
+      "topics": ["low power wireless networking", "mobile computing"],
+      "url_template": "https://mswimconf.com/",
+      "sources": ["https://mswimconf.com/"],
+      "stages": {
+        "submission":   { "date": "2027-06-01", "status": "estimated" },
+        "notification": { "date": "2027-07-25", "status": "estimated" },
+        "camera_ready": { "date": "2027-08-25", "status": "estimated" }
+      },
+      "conference": { "start": "2027-10-25", "end": "2027-10-29", "status": "estimated" }
+    },
+    {
+      "id": "infocom",
+      "name": "INFOCOM",
+      "full_name": "IEEE International Conference on Computer Communications",
+      "edition_year": 2028,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "B+",
+      "topics": ["low power wireless networking", "internet of things"],
+      "url_template": "https://infocom{year}.ieee-infocom.org/",
+      "sources": ["https://www.comsoc.org/conferences-events/ieee-international-conference-computer-communications-2027"],
+      "stages": {
+        "submission":   { "date": "2027-07-31", "status": "estimated" },
+        "notification": { "date": "2027-12-01", "status": "estimated" },
+        "camera_ready": { "date": "2028-01-31", "status": "estimated" }
+      },
+      "conference": { "start": "2028-05-15", "end": "2028-05-18", "status": "estimated" }
+    },
+    {
+      "id": "percom",
+      "name": "PerCom",
+      "full_name": "IEEE International Conference on Pervasive Computing and Communications",
+      "edition_year": 2028,
+      "location": "TBD",
+      "region": "TBD",
+      "tier": "A",
+      "topics": ["mobile computing", "sensors", "internet of things"],
+      "url_template": "https://percom.org/",
+      "sources": ["https://percom.org/", "https://percom.org/call-for-papers/"],
+      "stages": {
+        "submission":   { "date": "2027-09-15", "status": "estimated" },
+        "notification": { "date": "2027-12-15", "status": "estimated" },
+        "camera_ready": { "date": "2028-01-15", "status": "estimated" }
+      },
+      "conference": { "start": "2028-03-13", "end": "2028-03-17", "status": "estimated" }
+    }
+  ]
+}
