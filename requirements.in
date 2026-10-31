@@ -1,0 +1,6 @@
+# Direct dependencies of the offline refresh tool (refresh.py + scrapers.py).
+# requirements.txt is generated from this file with hashes for every package,
+# including transitive ones (urllib3, certifi, ...), so installs are reproducible:
+#   pip-compile --generate-hashes --strip-extras requirements.in
+requests==2.34.2
+beautifulsoup4==4.15.0

@@ -21,8 +21,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.140.2
-      HUGO_SHA256: efafaa07af0b00fcca685e2241a9ea9892960efb7d03d63e2cf5e50fd5f1f617
+      HUGO_VERSION: 0.165.0
+      HUGO_SHA256: f43494894cdf4a8630a201d5c828051c77f523cc66bb3938b30806835470ac20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 

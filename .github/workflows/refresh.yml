@@ -16,9 +16,8 @@ on:
     - cron: "17 5 * * 1"   # Mondays 05:17 UTC
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pull-requests: write
+# No default token permissions; the job below asks for exactly what it needs.
+permissions: {}
 
 concurrency:
   group: refresh-data
@@ -27,6 +26,9 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write        # push the auto/refresh-data branch
+      pull-requests: write   # open or update the PR
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -36,7 +38,7 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - run: pip install -r requirements.txt
+      - run: pip install --require-hashes -r requirements.txt
 
       - name: Offline tests
         run: python tests/test_scrapers.py
