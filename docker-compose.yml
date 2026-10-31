@@ -9,7 +9,7 @@ services:
     image: confview:latest
     container_name: confview
     ports:
-      - "8000:80"
+      - "8000:8080"
     restart: unless-stopped
 
   # On-demand data refresh (not started by `up`; it's in the "tools" profile).

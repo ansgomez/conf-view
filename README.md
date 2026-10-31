@@ -25,17 +25,27 @@ It ships with a curated list of embedded-systems / sensor-networking conferences
 ## Project layout
 
 ```
-hugo.toml              site config: subtitle, preferredRegion, minify settings
+hugo.toml              site config: subtitle, description, preferredRegion, minify
 data/
   conferences.json     the conference records (also the scraper's seed + output)
-  tiers.yaml           YOUR tier definitions — labels, colours, blurbs, ordering
-layouts/index.html     the whole dashboard (template + CSS + client-side JS)
+  tiers.yaml           YOUR tier definitions — labels, colours (light + dark), blurbs
+layouts/index.html     the dashboard page: markup, CSS (light/dark theme tokens),
+                       meta/Open Graph tags, CSP, no-JavaScript fallback table
+layouts/partials/logo.html  inline wordmark SVG (follows the page theme)
+static/js/app.js       client-side rendering: filters, timeline, cards
+static/js/theme.js     applies the theme before first paint (light/dark/system)
+static/favicon.svg     app icon; favicon-32.png and apple-touch-icon.png too
+static/img/            logo, mark and icon SVGs (light + dark), og.png preview
 scrapers.py            generic CFP scraper (keyword + date heuristics)
 refresh.py             offline tool: scrape -> rewrite data/conferences.json
 .github/workflows/refresh.yml  weekly scheduled refresh -> one pull request
 .github/workflows/pages.yml    build and publish the site on GitHub Pages
+.github/workflows/test.yml     tests + Hugo build on every push and pull request
 tests/test_scrapers.py  offline tests for the date parsing and merge rules
-Dockerfile             reproducible Hugo build (pinned version) -> nginx
+Dockerfile             reproducible Hugo build (pinned version) -> nginx (non-root)
+nginx.conf             security headers (CSP, nosniff, ...) and gzip for the image
+requirements.in        direct Python dependencies; requirements.txt is compiled
+                       from it with hashes for every package
 Dockerfile.refresh     Python image for the offline refresh
 docker-compose.yml     `site` service + on-demand `refresh` service
 ```
@@ -56,7 +66,7 @@ Or with plain Docker:
 
 ```bash
 docker build -t confview .
-docker run --rm -p 8000:80 confview      # http://localhost:8000
+docker run --rm -p 8000:8080 confview    # http://localhost:8000
 ```
 
 ### Local (if you already have Hugo installed)
@@ -141,7 +151,7 @@ docker compose run --rm refresh          # scrapes -> updates ./data/conferences
 docker compose up --build site           # rebuild to publish the new dates
 
 # Or locally:
-pip install -r requirements.txt
+pip install --require-hashes -r requirements.txt
 python refresh.py            # scrape all sites, rewrite data/conferences.json
 python refresh.py --list     # just print current data, sorted by deadline
 python refresh.py --dry-run  # scrape and summarise without writing
@@ -215,11 +225,32 @@ requests (Settings → Actions → General → Workflow permissions).
 
 ## Upgrading Hugo
 
-Bump `HUGO_VERSION` in `Dockerfile` and replace the two `HUGO_SHA256_*` values with the
-checksums from the matching GitHub release (`hugo_<version>_checksums.txt`). The pinned
+Bump `HUGO_VERSION` in `Dockerfile`, `.github/workflows/pages.yml` and
+`.github/workflows/test.yml`, and replace the `HUGO_SHA256*` values with the
+checksums from the matching GitHub release (`hugo_<version>_checksums.txt`). The
+template uses `hugo.Data`, so Hugo 0.156 or newer is required. The pinned
 version + checksum are what make the build reproducible. The base images in both
 Dockerfiles are pinned by digest (`image:tag@sha256:...`); Dependabot proposes digest
 bumps monthly, or look one up with `docker buildx imagetools inspect <image:tag>`.
+
+## Updating Python dependencies
+
+Edit `requirements.in`, then regenerate the hash-pinned `requirements.txt`:
+
+```bash
+pip install pip-tools
+pip-compile --generate-hashes --strip-extras requirements.in
+```
+
+## Security notes
+
+- Scripts are external files, so the Content-Security-Policy (a `<meta>` tag in
+  `layouts/index.html`, and a header from `nginx.conf` in the Docker image) allows
+  only `script-src 'self'`. Keep new JavaScript in `static/js/`, not inline.
+- Everything from the data files that reaches the page is HTML-escaped, and tier
+  colours must be hex values.
+- GitHub Pages cannot send custom headers, so `frame-ancestors` and the other
+  header-only protections apply only to the Docker image.
 
 ## License
 

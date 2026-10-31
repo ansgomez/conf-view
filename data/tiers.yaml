@@ -14,6 +14,10 @@
 #   short               tiny badge text on each card (defaults to id)
 #   color               text/accent colour (any CSS colour)
 #   bg                  badge background colour
+#   color_dark, bg_dark the same two colours for the dark theme (optional; when
+#                       missing, dark mode uses neutral chip colours)
+#   Colours must be hex values (#rgb, #rrggbb or #rrggbbaa); anything else is
+#   ignored and the neutral chip colours are used instead.
 #   blurb               one line explaining, in the legend, what this tier means
 #   flag_outside_region if true, editions outside params.preferredRegion are
 #                       highlighted (see hugo.toml). Optional, defaults to false.
@@ -24,13 +28,17 @@
   short: "A"
   color: "#6a3fd0"
   bg: "#ede7fb"
+  color_dark: "#cbbcff"
+  bg_dark: "#2d2547"
   blurb: "Top venues I target regardless of location."
 
 - id: "B+"
   label: "Tier B+ — strong, usually worth it"
   short: "B+"
-  color: "#2f6fd0"
+  color: "#2558b8"
   bg: "#e7eefc"
+  color_dark: "#a3c0ff"
+  bg_dark: "#1f2d4a"
   blurb: "A cut above B; I'll usually submit even with some travel."
   # Add `flag_outside_region: true` here if you want the travel nudge on B+ too.
 
@@ -39,5 +47,7 @@
   short: "B"
   color: "#1c6f67"
   bg: "#e9f4f2"
+  color_dark: "#8fd6cb"
+  bg_dark: "#1b3330"
   blurb: "Solid venues; I prefer these when they're in my region."
   flag_outside_region: true

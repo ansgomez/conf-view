@@ -115,7 +115,7 @@ def print_list(data: dict) -> None:
         return
     for c in rows:
         sub = c.get("stages", {}).get("submission", {})
-        print(f"{c['name']:<10} {c['edition_year']:<6} {c.get('location',''):<28} "
+        print(f"{c.get('name', '?'):<10} {c.get('edition_year') or '':<6} {c.get('location') or '':<28} "
               f"submit {sub.get('date','?')} [{sub.get('status','?')}]")
 
 

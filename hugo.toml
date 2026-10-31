@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "en-us"
+locale = "en-US"
 title = "ConfView — Conference Deadline Tracker"
 
 # Single-page site: no taxonomies, feed or sitemap to generate.
@@ -11,6 +11,9 @@ disableKinds = ["taxonomy", "term", "rss", "sitemap"]
 [params]
   # Subtitle shown under the title. Purely cosmetic.
   subtitle = "Academic conference submission-deadline tracker"
+
+  # Search-engine and link-preview description (meta description, og:description).
+  description = "Upcoming paper submission, notification and camera-ready deadlines for embedded systems, IoT and wireless networking conferences, checked weekly against the official CFP pages."
 
   # Your "home" region. Any conference in a tier flagged `flag_outside_region`
   # that is NOT in this region (and not "TBD") gets highlighted as a nudge —

@@ -36,6 +36,7 @@ import contextvars
 import datetime as _dt
 import logging
 import re
+import time
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
@@ -45,7 +46,9 @@ from bs4 import BeautifulSoup
 log = logging.getLogger("confview.scrapers")
 
 USER_AGENT = "ConfView/1.0 (+https://github.com/ansgomez/conf-view) conference-deadline-tracker"
-TIMEOUT = 20
+TIMEOUT = 20          # per connect/read call (requests semantics)
+TOTAL_TIMEOUT = 45    # wall-clock cap for one page, so a slow-drip server can't stall a run
+CHUNK = 65_536
 MAX_BYTES = 5_000_000  # CFP pages are small; don't load anything huge into memory
 
 # Listing and aggregator sites: useful as a human reference, but their dates are
@@ -276,7 +279,21 @@ def fetch(url: str) -> Optional[str]:
         with requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT,
                           stream=True) as resp:
             resp.raise_for_status()
-            body = resp.raw.read(MAX_BYTES + 1, decode_content=True)
+            # Read in chunks against a wall-clock deadline: TIMEOUT only bounds
+            # each socket operation, not the whole download. read(amt) also
+            # bounds decompression, so a gzip bomb stops at MAX_BYTES.
+            deadline = time.monotonic() + TOTAL_TIMEOUT
+            parts, size = [], 0
+            while size <= MAX_BYTES:
+                chunk = resp.raw.read(CHUNK, decode_content=True)
+                if not chunk:
+                    break
+                parts.append(chunk)
+                size += len(chunk)
+                if time.monotonic() > deadline:
+                    log.warning("fetch gave up on %s: slower than %ds", url, TOTAL_TIMEOUT)
+                    return None
+            body = b"".join(parts)
             # requests assumes ISO-8859-1 when the header has no charset, which
             # garbles UTF-8 dashes; in that case let BeautifulSoup read <meta charset>.
             declared = "charset" in resp.headers.get("content-type", "").lower()

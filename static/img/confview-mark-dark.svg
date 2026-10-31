@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.2 57.2" role="img" aria-label="ConfView">
+  <title>ConfView</title>
+  <circle cx="6.6" cy="6.6" r="6.6" fill="#FFFFFF"/>
+  <circle cx="28.6" cy="6.6" r="6.6" fill="#FFFFFF"/>
+  <circle cx="50.6" cy="6.6" r="6.6" fill="#FFFFFF"/>
+  <circle cx="6.6" cy="28.6" r="6.6" fill="#FFFFFF"/>
+  <circle cx="28.6" cy="28.6" r="9.1" fill="#4353FF"/>
+  <circle cx="6.6" cy="50.6" r="6.6" fill="#FFFFFF"/>
+  <circle cx="28.6" cy="50.6" r="6.6" fill="#FFFFFF"/>
+  <circle cx="50.6" cy="50.6" r="6.6" fill="#FFFFFF"/>
+</svg>

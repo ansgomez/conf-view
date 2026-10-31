@@ -256,8 +256,9 @@ check("SR edition_year follows the shift", run({"https://2027.x.org/": "Paper su
 
 # fetch(): UTF-8 page without a charset header keeps its en dash
 class _Raw:
-    def __init__(self, b): self.b = b
-    def read(self, n, decode_content=True): return self.b[:n]
+    def __init__(self, b): self.b, self.pos = b, 0
+    def read(self, n, decode_content=True):
+        out = self.b[self.pos:self.pos + n]; self.pos += len(out); return out
 class _Resp:
     def __init__(self, b, ctype): self.raw, self.headers, self.encoding = _Raw(b), {"content-type": ctype}, "ISO-8859-1"
     def raise_for_status(self): pass
@@ -268,6 +269,12 @@ S.requests.get = lambda *a, **k: _Resp('<p>Conference dates: June 22–24, 2026<
 check("utf-8 without charset", S.extract_important_dates(S.fetch("https://x.org/")).get("conference"), ("2026-06-22", "2026-06-24"))
 S.requests.get = lambda *a, **k: _Resp(b"x" * (S.MAX_BYTES + 10), "text/html")
 check("oversized page skipped", S.fetch("https://x.org/"), None)
+S.requests.get = lambda *a, **k: _Resp(b"<p>Paper submission: May 1, 2026</p>" * 5000, "text/html")
+check("multi-chunk page read whole", S.extract_important_dates(S.fetch("https://x.org/")).get("submission"), "2026-05-01")
+S.TOTAL_TIMEOUT = -1
+S.requests.get = lambda *a, **k: _Resp(b"<p>slow</p>", "text/html")
+check("slow page gives up", S.fetch("https://x.org/"), None)
+S.TOTAL_TIMEOUT = 45
 
 # refresh.py: layout round trip, and nothing written when too few pages parse
 import json, tempfile, importlib.util
@@ -337,6 +344,25 @@ check("N convention does not leak", S._parse_single("Deadline: 03/04/2026"), Non
 check("N full page dotted", S.extract_important_dates(
       "Wichtige Termine\nPaper submission: 15.12.2026\nAuthor notification: 08.02.2027\nCamera-ready: 24.02.2027\nConference dates: 09.-11.03.2027"),
       {"submission": "2026-12-15", "notification": "2027-02-08", "camera_ready": "2027-02-24", "conference": ("2027-03-09", "2027-03-11")})
+
+# refresh.py: --list tolerates entries without edition_year/location; main() exit codes
+import io, contextlib
+buf = io.StringIO()
+with contextlib.redirect_stdout(buf):
+    R.print_list({"conferences": [{"name": "Y", "stages": {}}, {"name": "Z", "edition_year": None, "location": None}]})
+check("print_list without edition_year", [l.split()[0] for l in buf.getvalue().splitlines()], ["Y", "Z"])
+with tempfile.TemporaryDirectory() as tmp:
+    R.DATA_FILE = R.Path(tmp) / "c.json"
+    R.save_data({"last_updated": "2026-01-01", "conferences": [copy.deepcopy(seed)]})
+    R.scrapers.scrape_all = lambda data: ({**data, "conferences": copy.deepcopy(data["conferences"])}, {"x": None})
+    argv = sys.argv
+    with contextlib.redirect_stdout(io.StringIO()):
+        sys.argv = ["refresh.py", "--fail-under", "1"]; code_fail = R.main()
+        R.scrapers.scrape_all = lambda data: ({**data, "conferences": copy.deepcopy(data["conferences"])}, {"x": "https://x.org/"})
+        code_ok = R.main()
+        sys.argv = ["refresh.py", "--list"]; code_list = R.main()
+    sys.argv = argv
+    check("main exit codes (fail-under, ok, --list)", (code_fail, code_ok, code_list), (1, 0, 0))
 
 print("ALL PASS" if ok else "SOME FAILED")
 sys.exit(0 if ok else 1)
