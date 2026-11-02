@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-30",
+  "last_updated": "2026-11-02",
   "conferences": [
     {
       "id": "wons",
@@ -67,8 +67,8 @@
       "url_template": "https://www.sigmobile.org/mobicom/",
       "sources": ["https://www.sigmobile.org/mobicom/2027/cfp.html", "https://www.sigmobile.org/mobicom/2027/", "https://www.sigmobile.org/mobicom/"],
       "stages": {
-        "submission":   { "date": "2027-03-12", "status": "estimated" },
-        "notification": { "date": "2027-06-28", "status": "estimated" },
+        "submission":   { "date": "2026-09-02", "status": "confirmed" },
+        "notification": { "date": "2026-10-23", "status": "confirmed" },
         "camera_ready": { "date": "2027-08-31", "status": "estimated" }
       },
       "conference": { "start": "2027-10-18", "end": "2027-10-22", "status": "confirmed" }
@@ -500,7 +500,7 @@
       "sources": ["https://2027.rtas.org/", "https://cps-iot-week-2027.sigbed.org/"],
       "stages": {
         "submission":   { "date": "2026-11-05", "status": "confirmed" },
-        "notification": { "date": "2027-01-28", "status": "estimated" },
+        "notification": { "date": "2027-01-28", "status": "confirmed" },
         "camera_ready": { "date": "2027-03-30", "status": "confirmed" }
       },
       "conference": { "start": "2027-05-17", "end": "2027-05-20", "status": "confirmed" }
